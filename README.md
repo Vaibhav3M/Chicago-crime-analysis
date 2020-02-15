@@ -33,43 +33,45 @@ Many literatures are trying to predict the crimes. Sunil Yadav is using supervis
 # ➢ II. Materials and Methods
 
 **Dataset**
+
 The dataset chosen for this project consists of incidents of crime reported in the city of Chicago from 2001 to 2019. Data is extracted from the Chicago Police Department's CLEAR (Citizen Law Enforcement Analysis and Reporting) system. It is one of the richest data sources in the area of crime. 
 The dataset includes sufficient information about Date, Type, Description, location etc about the crime for our analysis.
  
 **Approach and corresponding technologies**
+
 In our project, we will deal with a big data set, so we need a technology that deals with big data processing efficiency. As Spark can do processing in-memory we will use it as our main framework.
 Below is the pipeline we will follow:
   1. Data Pre-Processing
   2. Exploratory analysis
   3. Predictive analysis
   
-**Data Pre-processing:**
-In this step, we will explore data, handle missing values, remove noise. 
-Estimate missing latitude and longitude based on Block using Google Geocoding API.  
-Combine similar types of crimes in case of minority classes to get better predictions.
+1. **Data Pre-processing:**
+  In this step, we will explore data, handle missing values, remove noise. 
+  Estimate missing latitude and longitude based on Block using Google Geocoding API.  
+  Combine similar types of crimes in case of minority classes to get better predictions.
 
-Technologies: Apache Spark, pyspark Dataframe.
- 
- 
-**Exploration Analysis:** 
-In this step, we will infer useful information and try to analyze important trends that will help in crime detection and prevention. The analysis will also help identify useful features for building predictive models.
-
-Methods: Plotting graphs, pie-chart, heatmaps, querying data. 
-Technologies:  pyspark DataFrame, pyspark SQL, pyspark RDD, Matplotlib, Seaborn, Folium. 
- 
- 
-# Predictive Analysis:
-In this step, we are going to use the k-Fold Cross-Validation technique for training and testing sets and will perform the following two predictions:
-
-**1. Predicting the type of crime based on its location**
-
-To perform this prediction we will use KNN - k nearest neighbor to predict the type of crime that has the highest probability based on the location(latitude, longitude). The model will identify the k-nearest neighbors using Euclidean distance where k is a user-specified number. K will be decided during the implementation phase. We may also look into KNN-IS and ESkNN. 
+  Technologies: Apache Spark, pyspark Dataframe.
 
 
-**2. Predicting the crime (probabilities) for a particular week(holidays) for the years 2019 and 2020**
+2. **Exploration Analysis:** 
+  In this step, we will infer useful information and try to analyze important trends that will help in crime detection and  prevention. The analysis will also help identify useful features for building predictive models.
 
-We will predict the location and type of crime that could happen during a particular week based on past year trends. Random forest methods in Spark will be used to predict the labels. K-fold cross-validation will be used to train the model for a particular week in the years from 2000 to 2018. 
-We will evaluate our model on the same week for 2019 and then predict the same for the year 2020. 
+  Methods: Plotting graphs, pie-chart, heatmaps, querying data. 
+  Technologies:  pyspark DataFrame, pyspark SQL, pyspark RDD, Matplotlib, Seaborn, Folium. 
+
+
+3. **Predictive Analysis:**
+  In this step, we are going to use the k-Fold Cross-Validation technique while training. We will perform the following two predictions:
+
+    **1. Predicting the type of crime based on its location**
+
+    To perform this prediction we will use KNN - k nearest neighbor to predict the type of crime that has the highest probability based on the location(latitude, longitude). The model will identify the k-nearest neighbors using Euclidean distance where k is a user-specified number. K will be decided during the implementation phase. We may also look into KNN-IS and ESkNN. 
+
+
+    **2. Predicting the crime (probabilities) for a particular week(holidays) for the years 2019 and 2020**
+
+    We will predict the location and type of crime that could happen during a particular week based on past year trends. Random forest methods in Spark will be used to predict the labels. K-fold cross-validation will be used to train the model for a particular week in the years from 2000 to 2018. 
+    We will evaluate our model on the same week for 2019 and then predict the same for the year 2020. 
  
 
 
