@@ -39,8 +39,7 @@ The dataset includes sufficient information about Date, Type, Description, locat
  
 **Approach and corresponding technologies**
 
-In our project, we will deal with a big data set, so we need a technology that deals with big data processing efficiency. As Spark can do processing in-memory we will use it as our main framework.
-Below is the pipeline we will follow:
+In our project, we will deal with a big data set, so we need a technology that deals with big data processing efficiency. As **Spark** can do processing in-memory we will use it as our main framework. We will also implement techniques thought in class : **k-fold crossvalidation, KNN and Random Forest**.<br/>  Below is the pipeline we will follow:
  - Data Pre-Processing
  - Exploratory analysis
  - Predictive analysis 
@@ -52,15 +51,15 @@ Below is the pipeline we will follow:
     a. Estimate missing latitude and longitude based on Block using Google Geocoding API.    
     b. Combine similar types of crimes in case of minority classes to get better predictions.
 
-  Technologies: Apache Spark, pyspark Dataframe.
+  *Technologies*: Apache Spark, pyspark Dataframe.
 
 
 2. **Exploration Analysis:** 
   In this step, we will infer useful information and try to analyze important trends that will help in crime detection and  prevention. The analysis will also help identify useful features for building predictive models.
 
-  Methods: Plotting graphs, pie-chart, heatmaps, querying data.
+  *Methods*: Plotting graphs, pie-chart, heatmaps, querying data.
   
-  Technologies:  pyspark DataFrame, pyspark SQL, pyspark RDD, Matplotlib, Seaborn, Folium. 
+  *Technologies*:  pyspark DataFrame, pyspark SQL, pyspark RDD, Matplotlib, Seaborn, Folium. 
 
 
 3. **Predictive Analysis:**
