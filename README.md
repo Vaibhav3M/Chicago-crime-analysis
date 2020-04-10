@@ -17,8 +17,8 @@ Crime is one of the most important social problems in the country, affecting pub
 
  **Exploratory Analysis:** (Graphical Analysis)
   1. During what time period of an year is the crime rate at its peak
-  2. How has the crime rate changed over the years?
-  3. Most unsafe area of the city
+  2. How has the crime rate changed over the years
+  3. Crime hotspots in city
   
  **Predictive Analysis:**
  
@@ -48,7 +48,7 @@ In our project, we will deal with a big data set, so we need a technology that d
    1\. **Data Pre-processing:**
   In this step, we will explore data, handle missing values, remove noise.
      Examples:  
-    a. Estimate missing latitude and longitude based on Block using Google Geocoding API.    
+    a. Implement sampling technique to overcome     
     b. Combine similar types of crimes in case of minority classes to get better predictions.
 
   *Technologies*: Apache Spark, pyspark Dataframe.
@@ -59,7 +59,7 @@ In our project, we will deal with a big data set, so we need a technology that d
 
   *Methods*: Plotting graphs, pie-chart, heatmaps, querying data.
   
-  *Technologies*:  pyspark DataFrame, pyspark SQL, pyspark RDD, Matplotlib, Seaborn, Folium. 
+  *Technologies*:  pyspark DataFrame, pyspark SQL, pyspark RDD, Matplotlib, Seaborn, Folium, Tableau. 
 
 
 3. **Predictive Analysis:**
@@ -72,7 +72,7 @@ In our project, we will deal with a big data set, so we need a technology that d
 
     **2. Predicting the crime (probabilities) for a particular week(holidays) for the years 2019 and 2020**
 
-    We will predict the location and type of crime that could happen during a particular week based on past year trends. **Random forest** methods in Spark will be used to predict the labels. K-fold cross-validation will be used to train the model for a particular week in the years from 2000 to 2018. 
+    We will predict the type of crime that could happen during a particular week and location based on past year trends. **Random forest** methods in Spark will be used to predict the labels. K-fold cross-validation will be used to train the model for a particular week in the years from 2000 to 2018. 
     We will evaluate our model on the same week for 2019 and then predict the same for the year 2020. 
  
 
