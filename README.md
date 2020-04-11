@@ -4,7 +4,7 @@
 Link: https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2
 
 # ➢ Abstract
-Crime is an inseparable part of our society, either being a victim or an offender everybody has witnessed crimes. We selected the “Chicago Crime dataset report” which has the incidents of crime for Chicago city that occurred from 2001 - present. We analyzed the trends of crime over the years, locations of the crimes where it happened the most, and hotspot of crimes over the years. In our experiment, we used supervised machine learning techniques including random forest, KNN and ensemble method for the prediction of crimes based on time, location and other parameters. 
+Crime is an inseparable part of our society, either being a victim or an offender everybody has witnessed crimes. In our project, we analysed the crimes data for that we selected the “Chicago Crime dataset report” which has the incidents of crimes for Chicago city that occurred from 2001 - present. We analyzed the trends of crime over the years, locations of the crimes where it happened the most, and hotspot of crimes over the years. In our experiment, we used supervised machine learning techniques including random forest, KNN and ensemble method for the prediction of crimes based on time, location and other parameters. 
 
 
 # ➢ I. Introduction
@@ -12,6 +12,7 @@ Crime is an inseparable part of our society, either being a victim or an offende
 Crime is an important social problem in the country, affecting public safety, children development, and adult socioeconomic status. A police officer may know where the dangerous areas are according to his experience, but he may not be able to tell about what kind of crime could happen. Our objective is to help police officers by providing useful information which is hard to get, so that they can take appropriate measures. We have used Apache spark’s Random Forest and SciKit-learn’s KNN classifier and ensemble method for the same. Our project has below two parts -
 
  **Exploratory Analysis:** 
+ 
   1. Trends of the crimes over the years (2010 - 2019)
   2. Type of locations where crimes happen the most 
   3. Timelapse of crimes hotspots over the years (2010 - 2019)
