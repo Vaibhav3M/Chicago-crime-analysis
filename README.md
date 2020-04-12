@@ -78,6 +78,95 @@ Below is the pipeline we followed:
 
 # ➢ III. Results
 
+Important Preprocessing Steps
+
+- **Dataset Analysis** - Our dataset was quite imbalanced and had a lot of features. Therefore, we tried making it balanced by merging similar types or dropping insignificant ones. 
+
+(insert image here)
+
+- **Feature Extraction** - 
+    1. Feature importance in Extra Tree Classifier
+    2. Principal Component Analysis 
+    3. Correlation Matrix/HeatMap.
+   
+ **Correlation Matrix/HeatMap -** The heatmap and matrix help us decide features which are in high correlation with Primary Type crime.
+
+(insert image here)
+
+Exploratory here:
+
+
+
+
+**Predictive Analysis**
+
+Predicting the type of crime(s) and probability of crimes based on location and time data:
+
+
+We concluded that location or time data alone are not enough to provide sufficient details.
+
+
+Predicting the type of crime(s) and probability of crimes based on both location and time data:
+
+**Random Forest Classifier**
+ 
+ Grid-search and k-fold cross validation provided the best params for RF.
+ 
+ 
+ 
+ Results: Accuracy = 36.86%
+          F1 score = 25.42%
+          
+ 
+ Additionally providing crime probabilities.
+ 
+ 
+ **KNN Classifier:**
+ 
+ Finding optimal K, using the elbow method.
+
+(elbow image here)
+
+
+
+Optimum K = 25
+Parameter tuning using Random Search and K-Fold cross-validation:
+'weights' =  ‘uniform
+‘metric'  = ‘manhattan' (Haversine - in case of Latitude and Longitude)
+
+**Feature Importance for KNN**
+
+(image here)
+
+
+**Impact of sampling on the KNN model:**
+
+Model with no sampling: Accuracy - 33.5%
+			                     F1 Score - 29.6%
+                        
+             (IMAGE HERE)
+
+Random oversampling of minority classes improved the prediction of the model. This could be as the model now better fits the minority data due to availability of a higher number of instances
+
+**Ensemble models - Voting Classifier**
+
+An ensemble of KNeighborsClassifier, RandomForestClassifier, and SVC. We have used soft voting for output. 
+Individual accuracy: 
+  KNN - 28.63%  
+  RF - 33.65%
+  SVC - 22.81% 
+  
+Ensemble - 35.21%. Ensemble helps with overall performance of the model. 
+
+
+**Comparison of best models from each category:**
+
+| Measures      | Random Forest | KNN (K = 25) | KNN (OverSampling) | Ensemble (KNN, RF, SVM) |
+|---------------|---------------|--------------|--------------------|-------------------------|
+| Accuracy      | 36.8%         | 33.5%        | 41%                | 35%                     |
+| F1-Score      | 25.4%         | 29.6%        | 31.6%              | 26.7%                   |
+| Time(Approx.) | 5 mins        | 25 mins      | 30 mins            | 1 hour                  |
+
 
 
 # ➢ IV. Discussion
