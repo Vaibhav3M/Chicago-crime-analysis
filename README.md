@@ -126,6 +126,8 @@ Predicting the type of crime(s) and probability of crimes based on both location
 **Random Forest Classifier**
  
  Grid-search and k-fold cross validation provided the best params for RF.
+ <img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/RF-grid.png" width="350" height="210"/>  
+ <img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/RF-parameters.png" width="210" height="350"/> 
  
  
  
@@ -134,13 +136,14 @@ Predicting the type of crime(s) and probability of crimes based on both location
           
  
  Additionally providing crime probabilities.
+ <img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/RF-prob.png" width="210" height="350"/>
  
  
  **KNN Classifier:**
  
  Finding optimal K, using the elbow method.
 
-![](https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/.png)
+![](https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/knn-elbow.png)
 
 
 
