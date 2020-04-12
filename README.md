@@ -32,45 +32,44 @@ Many literatures are trying to predict the crimes. Sunil Yadav et al M. Timbadia
 **Dataset**
 
 The dataset chosen for this project consists of incidents of crime reported in the city of Chicago from 2001 to 2019. Data is extracted from the Chicago Police Department's CLEAR (Citizen Law Enforcement Analysis and Reporting) system. It is one of the richest data sources in the area of crime. 
-The dataset includes sufficient information about Date, Type, Description, location etc about the crime for our analysis.
+The dataset includes enough information about Date, Type, Description, location etc about the crime for our analysis.
  
 **Approach and corresponding technologies**
 
-In our project, we will deal with a big data set, so we need a technology that deals with big data processing efficiency. As **Spark** can do processing in-memory we will use it as our main framework. We will also implement techniques thought in class : **k-fold crossvalidation, KNN and Random Forest**.<br/>  Below is the pipeline we will follow:
- - Data Pre-Processing
- - Exploratory analysis
- - Predictive analysis 
+The dataset contains 7 million records of the crime. Data of this size needs fast and efficient data processing. We have used Spark framework as its in-memory processing capability makes it easy to deal with data of this volume. We have implemented some techniques such as: k-fold cross validation, KNN, Random Forest, ensemble method and feature selection.
+
+Below is the pipeline we followed:
+
+  1. **Data Pre-processing:** In this step we chose data from year 2010-2019 as the accuracy stabilized for this time period. 
+      -  Dropped missing/null values as it accounted for <1% of data. 
+      -  Filtered out irrelevant features from the dataset. 
+      -  Reduced/merged number of crime types from 32 to 16.
+      -  Used Random Over sampling/Under sampling techniques to balance the data.
+      
+     *Technologies*: Apache Spark, pyspark Dataframe.
+
+
+2. **Exploration Analysis:** In this step, we inferred useful information and analyzed important trends for crime detection and   prevention. The analysis will also help identify useful features for building predictive models.
+
+   *Methods*: Bar graph, line graph, pie-chart, heatmaps, querying data.
   
-  
-   1\. **Data Pre-processing:**
-  In this step, we will explore data, handle missing values, remove noise.
-     Examples:  
-    a. Implement sampling technique to overcome     
-    b. Combine similar types of crimes in case of minority classes to get better predictions.
-
-  *Technologies*: Apache Spark, pyspark Dataframe.
+   *Technologies*:  pyspark DataFrame, pyspark SQL, pyspark RDD, Matplotlib, Folium, Tableau. 
 
 
-2. **Exploration Analysis:** 
-  In this step, we will infer useful information and try to analyze important trends that will help in crime detection and  prevention. The analysis will also help identify useful features for building predictive models.
-
-  *Methods*: Plotting graphs, pie-chart, heatmaps, querying data.
-  
-  *Technologies*:  pyspark DataFrame, pyspark SQL, pyspark RDD, Matplotlib, Seaborn, Folium, Tableau. 
-
-
-3. **Predictive Analysis:**
-  In this step, we are going to use the k-Fold Cross-Validation technique while training. We will perform the following two predictions:
-
-    **1. Predicting the type of crime based on its location**
-
-    To perform this prediction we will use **KNN - k nearest neighbor** to predict the type of crime that has the highest probability based on the location(latitude, longitude). The model will identify the k-nearest neighbors using Euclidean distance where k is a user-specified number. K will be decided during the implementation phase. We will also explore KNN-IS and ESkNN. 
+3. **Predictive Analysis:** Below predictions were tried on both KNN and Random Forest and the results were compared with each other.  Below are the steps involved: 
+    -  We used random split, k-Fold Cross-Validation technique while training.
+    -  We further trained the model with additional features such as Location Description, Arrest etc. to achieve better accuracy.
+    -  We transformed categorical data to binary vectors using One Hot Vector/ Label Encoding.
+    -  Used ExtraTreesClassifier, Correlation Matrix/HeatMap, Principal Component Analysis (PCA) as feature selection techniques.
+    -  Tuned the hyperparameters such as no of neighbors in KNN and no of trees in Random Forest.
+    -  Used an ensemble of different classification models and used soft voting for output.
+    
+    3.1. **Predicting the type of crime (probabilities) based on its location**: We used latitude, longitude as location to predict the type of crime. We used vector assembler to transform two columns into a vector. 
 
 
-    **2. Predicting the crime (probabilities) for a particular week(holidays) for the years 2019 and 2020**
+    3.2. **Predicting the crime based on time(week)**: We used week as a feature to predict the crime based on time. 
 
-    We will predict the type of crime that could happen during a particular week and location based on past year trends. **Random forest** methods in Spark will be used to predict the labels. K-fold cross-validation will be used to train the model for a particular week in the years from 2000 to 2018. 
-    We will evaluate our model on the same week for 2019 and then predict the same for the year 2020. 
+     
  
 **References:**
 
