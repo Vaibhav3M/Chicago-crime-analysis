@@ -80,7 +80,7 @@ Below is the pipeline we followed:
  
 # ➢ III. Results
 
-1. <h3><pre>Important Preprocessing Steps</pre></h3>
+ <h3><pre>1. Important Preprocessing Steps</pre></h3>
 
 - **Dataset Analysis** - Our dataset was quite imbalanced and had a lot of features. Therefore, we tried making it balanced by merging similar types or dropping insignificant ones. 
 
@@ -96,7 +96,7 @@ Below is the pipeline we followed:
 <img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/heatmap.png" width="350" height="210"/>  <img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/corelation.png" width="210" height="350"/> 
 
 
-2. <h3><pre>Exploratory Analysis: </pre></h3>
+<h3><pre>2. Exploratory Analysis: </pre></h3>
 
 <img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/image1.gif" width="700" height="360"/>
 		<p> Crime hotstops across the past decade</p>
@@ -106,7 +106,7 @@ Below is the pipeline we followed:
 
 
 
-3. <h3><pre> Predictive Analysis: </pre></h3>
+<h3><pre>3. Predictive Analysis: </pre></h3>
 
 **Predicting the type of crime(s) and probability of crimes based on location and time data:**
 
@@ -118,7 +118,7 @@ Below is the pipeline we followed:
 | KNN              | F1 Score | 25.33%              | 21.2%           |
 
 
-We concluded that location or time data alone donnot provide sufficient details.
+We concluded that location or time data alone donot provide sufficient details.
 
 **Predicting the type of crime(s) and probability of crimes based on both location and time data:**
 
@@ -189,7 +189,7 @@ Individual accuracy:
   
 - Overall Ensemble - 35.21%
 
-4. <h3><pre>Comparison of best models from each category:</h3></pre>
+<h3><pre>4. Comparison of best models from each category:</h3></pre>
 
 | Measures      | Random Forest | KNN (K = 25) | KNN (OverSampling) | Ensemble (KNN, RF, SVM) |
 |---------------|---------------|--------------|--------------------|-------------------------|
