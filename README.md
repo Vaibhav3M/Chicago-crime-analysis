@@ -1,5 +1,7 @@
 # Project-SOEN691-BigData
 
+Team 30
+
 # Chicago Crime Dataset 
 Link: https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2
 
@@ -82,7 +84,7 @@ Important Preprocessing Steps
 
 - **Dataset Analysis** - Our dataset was quite imbalanced and had a lot of features. Therefore, we tried making it balanced by merging similar types or dropping insignificant ones. 
 
-(insert image here)
+![](https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/image6.png)
 
 - **Feature Extraction** - 
     1. Feature importance in Extra Tree Classifier
@@ -95,12 +97,24 @@ Important Preprocessing Steps
 
 Exploratory here:
 
+![](https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/image1.gif)
+		Crime hotstops across the past decade
+		
+![](https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/image8.png)
+		Trend of crime types across the past decade
 
 
 
 **Predictive Analysis**
 
 Predicting the type of crime(s) and probability of crimes based on location and time data:
+
+| Prediction Model | Measure  | Location Data Based | Time Data Based |
+|------------------|----------|---------------------|-----------------|
+| Random Forest    | Accuracy | 26.33%              | 22.65%          |
+| Random Forest    | F1 Score | 17.58 %             | 8.37%           |
+| KNN              | Accuracy | 29.62%              |                 |
+| KNN              | F1 Score | 25.33%              |                 |
 
 
 We concluded that location or time data alone are not enough to provide sufficient details.
@@ -142,9 +156,11 @@ Parameter tuning using Random Search and K-Fold cross-validation:
 **Impact of sampling on the KNN model:**
 
 Model with no sampling: Accuracy - 33.5%
-			                     F1 Score - 29.6%
+			F1 Score - 29.6%
+			
+
                         
-             (IMAGE HERE)
+             
 
 Random oversampling of minority classes improved the prediction of the model. This could be as the model now better fits the minority data due to availability of a higher number of instances
 
