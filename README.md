@@ -80,7 +80,7 @@ Below is the pipeline we followed:
  
 # ➢ III. Results
 
-<pre>Important Preprocessing Steps</pre>
+1. <h3><pre>Important Preprocessing Steps</pre></h3>
 
 - **Dataset Analysis** - Our dataset was quite imbalanced and had a lot of features. Therefore, we tried making it balanced by merging similar types or dropping insignificant ones. 
 
@@ -96,7 +96,7 @@ Below is the pipeline we followed:
 <img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/heatmap.png" width="350" height="210"/>  <img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/corelation.png" width="210" height="350"/> 
 
 
-<pre>Exploratory here: </pre>
+2. <h3><pre>Exploratory Analysis: </pre></h3>
 
 <img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/image1.gif" width="700" height="360"/>
 		<p> Crime hotstops across the past decade</p>
@@ -106,9 +106,9 @@ Below is the pipeline we followed:
 
 
 
-<pre> Predictive Analysis </pre>
+3. <h3><pre> Predictive Analysis: </pre></h3>
 
-Predicting the type of crime(s) and probability of crimes based on location and time data:
+**Predicting the type of crime(s) and probability of crimes based on location and time data:**
 
 | Prediction Model | Measure  | Location Data Based | Time Data Based |
 |------------------|----------|---------------------|-----------------|
@@ -120,8 +120,7 @@ Predicting the type of crime(s) and probability of crimes based on location and 
 
 We concluded that location or time data alone donnot provide sufficient details.
 
-
-Predicting the type of crime(s) and probability of crimes based on both location and time data:
+**Predicting the type of crime(s) and probability of crimes based on both location and time data:**
 
 **Random Forest Classifier**
  
@@ -131,8 +130,9 @@ Predicting the type of crime(s) and probability of crimes based on both location
  <img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/RF-parameters.png">
  
 
- Results: Accuracy = 36.86%
-          F1 score = 25.42%
+ Results: 
+ - Accuracy = 36.86%
+ - F1 score = 25.42%
           
  
  Additionally providing crime probabilities.
@@ -153,15 +153,16 @@ Parameter tuning using Random Search and K-Fold cross-validation:
 'weights' =  ‘uniform
 ‘metric'  = ‘manhattan' (Haversine - in case of Latitude and Longitude)
 
-**Feature Importance for KNN**
+**Accuracy comparison before and after training model with additonal features**
 
 ![](https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/KNN-params.png)
 
 
 **Impact of sampling on the KNN model:**
 
-Model with no sampling: Accuracy - 33.5%
-			F1 Score - 29.6%
+Model with no sampling: 
+- Accuracy - 33.5%
+- F1 Score - 29.6%
 
 **UnderSampling** 
 | Sampling Technique | Accuracy | F1 Score | 
@@ -182,14 +183,13 @@ Random oversampling of minority classes improved the prediction of the model. Th
 
 An ensemble of KNeighborsClassifier, RandomForestClassifier, and SVC. We have used soft voting for output. 
 Individual accuracy: 
-		- KNN -> 28.63%  
-  		- RF -> 33.65%
-  		- SVC -> 22.81% 
+- KNN -> 28.63%  
+- RF -> 33.65%
+- SVC -> 22.81% 
   
-Ensemble - 35.21%. Ensemble helps with overall performance of the model. 
+- Overall Ensemble - 35.21%
 
-
-**Comparison of best models from each category:**
+4. <h3><pre>Comparison of best models from each category:</h3></pre>
 
 | Measures      | Random Forest | KNN (K = 25) | KNN (OverSampling) | Ensemble (KNN, RF, SVM) |
 |---------------|---------------|--------------|--------------------|-------------------------|
