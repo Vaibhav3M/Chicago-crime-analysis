@@ -80,7 +80,7 @@ Below is the pipeline we followed:
 
 # ➢ III. Results
 
-Important Preprocessing Steps
+<pre>Important Preprocessing Steps</pre>
 
 - **Dataset Analysis** - Our dataset was quite imbalanced and had a lot of features. Therefore, we tried making it balanced by merging similar types or dropping insignificant ones. 
 
@@ -93,19 +93,20 @@ Important Preprocessing Steps
    
  **Correlation Matrix/HeatMap -** The heatmap and matrix help us decide features which are in high correlation with Primary Type crime.
 
-(insert image here)
+<img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/heatmap.png" width="350" height="210"/>  <img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/corelation.png" width="210" height="350"/> 
 
-Exploratory here:
 
-![](https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/image1.gif)
-		Crime hotstops across the past decade
-		
-![](https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/image8.png)
+<pre>Exploratory here: </pre>
+
+<img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/image1.gif" width="700" height="360"/>
+		<p> Crime hotstops across the past decade</p>
+
+<img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/image8.png"> 
 		Trend of crime types across the past decade
 
 
 
-**Predictive Analysis**
+<pre> Predictive Analysis </pre>
 
 Predicting the type of crime(s) and probability of crimes based on location and time data:
 
@@ -113,11 +114,11 @@ Predicting the type of crime(s) and probability of crimes based on location and 
 |------------------|----------|---------------------|-----------------|
 | Random Forest    | Accuracy | 26.33%              | 22.65%          |
 | Random Forest    | F1 Score | 17.58 %             | 8.37%           |
-| KNN              | Accuracy | 29.62%              | 41%             |
-| KNN              | F1 Score | 25.33%              | 31.6%           |
+| KNN              | Accuracy | 29.62%              | 27.7%           |
+| KNN              | F1 Score | 25.33%              | 21.2%           |
 
 
-We concluded that location or time data alone are not enough to provide sufficient details.
+We concluded that location or time data alone donnot provide sufficient details.
 
 
 Predicting the type of crime(s) and probability of crimes based on both location and time data:
@@ -139,7 +140,7 @@ Predicting the type of crime(s) and probability of crimes based on both location
  
  Finding optimal K, using the elbow method.
 
-(elbow image here)
+![](https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/.png)
 
 
 
@@ -150,17 +151,26 @@ Parameter tuning using Random Search and K-Fold cross-validation:
 
 **Feature Importance for KNN**
 
-(image here)
+![](https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/KNN-params.png)
 
 
 **Impact of sampling on the KNN model:**
 
 Model with no sampling: Accuracy - 33.5%
 			F1 Score - 29.6%
-			
 
-                        
-             
+**UnderSampling** 
+| Sampling Technique | Accuracy | F1 Score | 
+|--------------------|----------|----------|
+| Cluster Centroids  | 24.92%   | 19.55%   |
+| Random             | 24.93%   | 19.55%   |  
+			                   
+
+**OverSampling**
+| Sampling Technique | Accuracy | F1 Score |
+|--------------------|----------|----------|
+| SMOTE              | 32.96%   | 29.62%   |
+| Random             | 41%      | 31.60%   |   
 
 Random oversampling of minority classes improved the prediction of the model. This could be as the model now better fits the minority data due to availability of a higher number of instances
 
@@ -168,9 +178,9 @@ Random oversampling of minority classes improved the prediction of the model. Th
 
 An ensemble of KNeighborsClassifier, RandomForestClassifier, and SVC. We have used soft voting for output. 
 Individual accuracy: 
-  KNN - 28.63%  
-  RF - 33.65%
-  SVC - 22.81% 
+		- KNN -> 28.63%  
+  		- RF -> 33.65%
+  		- SVC -> 22.81% 
   
 Ensemble - 35.21%. Ensemble helps with overall performance of the model. 
 
@@ -183,6 +193,7 @@ Ensemble - 35.21%. Ensemble helps with overall performance of the model.
 | F1-Score      | 25.4%         | 29.6%        | 31.6%              | 26.7%                   |
 | Time(Approx.) | 5 mins        | 25 mins      | 30 mins            | 1 hour                  |
 
+KNN (OverSampling) provides the best results. 
 
 
 # ➢ IV. Discussion
