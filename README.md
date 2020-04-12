@@ -113,8 +113,8 @@ Predicting the type of crime(s) and probability of crimes based on location and 
 |------------------|----------|---------------------|-----------------|
 | Random Forest    | Accuracy | 26.33%              | 22.65%          |
 | Random Forest    | F1 Score | 17.58 %             | 8.37%           |
-| KNN              | Accuracy | 29.62%              |                 |
-| KNN              | F1 Score | 25.33%              |                 |
+| KNN              | Accuracy | 29.62%              | 41%             |
+| KNN              | F1 Score | 25.33%              | 31.6%           |
 
 
 We concluded that location or time data alone are not enough to provide sufficient details.
