@@ -84,7 +84,7 @@ Below is the pipeline we followed:
 
 - **Dataset Analysis** - Our dataset was quite imbalanced and had a lot of features. Therefore, we tried making it balanced by merging similar types or dropping insignificant ones. 
 
-![](https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/image6.png)
+<img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/pie-comparison.png" height="400"/> 
 
 - **Feature Extraction** - 
     1. Feature importance in Extra Tree Classifier
