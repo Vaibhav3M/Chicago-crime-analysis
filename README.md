@@ -78,19 +78,21 @@ Below is the pipeline we followed:
 
 # ➢ III. Results
 
+
+
 # ➢ IV. Discussion
 
 **Relevance of solution**:
--  The correlation provided by the feature selection techniques wasn’t enough to predict the crime type. We experimented with different features in order to get better predictions such as using week/month/year to predict crime type based on time and using additional features such as location description, arrest. There is no doubt that we achieved better accuracy however it wasn’t significant enough. 
-Further trying to achieve better accuracy could have introduced the problem of overfitting.
--  The original dataset was highly imbalanced. Even after dropping/merging some crime types we still had the imbalance of 100:3 between some of the crime types.
-Not every crime type could be reduced to another type and it wouldn’t have made sense to balance the dataset by merging non related crime types in the first place.
--  Different sampling techniques were used to balance the data. Random Oversampling gave better accuracy in comparison to undersampling. However the increase was comparably small. Applying combination of both undersampling and oversampling might result in better overall performance.
+- Machine Learning models are as good or as bad as the data you have. Correlation between features is important for predictions. In our case, we experienced low correlation features with our predicting variable. We experimented with different features in order to get better predictions such as using week/month/year to predict crime type based on time and using additional features such as location description, arrest. The results became better, however, not significant enough. 
+
+- The original dataset was highly imbalanced. Even after dropping/merging related some crime types we still had an imbalance of 100:3. Then, we tried sampling techniques for balancing. Random Oversampling gave best results in comparison to other sampling techniques. However, the increase was comparably small. Applying combination of both undersampling and oversampling might result in better overall performance.
+
+- Ensembling various classification models also seemed useful, particularly ‘soft voting’ technique provided better results
+
 
 **Limitations**:
 -  Predicting crime patterns have complicated factors, some of them are related to sociology, economics, even history, and geography. The tasks can be further extended to include information about the victims and the offenders are made available.
--  Good predictions are based on two factors: Good Model, but more importantly, good data. 
-Even though we have a big dataset, the features it provides are not good to predict where and when a crime may happen.
+-  Good predictions are based on two factors: Good Model, but more importantly, good data. Even though we have a big dataset, the features it provides are not good to predict where and when a crime may happen.
 -  Not all crimes had a good correlation with parameters such as latitude and longitude. 
 
 **Future work**:
