@@ -209,6 +209,11 @@ KNN (OverSampling) provides the best results.
 
 - Ensembling various classification models also seemed useful, particularly ‘soft voting’ technique provided better results
 
+- We used Google Colab as development environment.
+	- GPU acceleration for scklearn models
+	- 25GB RAM 
+	- Easy collaboration between team
+
 
 **Limitations**:
 -  Predicting crime patterns have complicated factors, some of them are related to sociology, economics, even history, and geography. The tasks can be further extended to include information about the victims and the offenders are made available.
