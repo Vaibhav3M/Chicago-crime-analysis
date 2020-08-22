@@ -225,3 +225,8 @@ KNN (OverSampling) provides the best results.
 -  Using models such as XGboost and Neural Network to identify patterns between data.
 -  Focus on specific crime types can provide better intuition. 
 -  Using a combination of oversampling and undersampling techniques.
+
+## License 
+
+
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://github.com/vaibhav3m)
